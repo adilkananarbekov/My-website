@@ -1,27 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Simple Webpage</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adilkan — Fancy Website</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- main stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Website</h1>
+  <!-- Top navigation -->
+  <header class="topbar">
+    <div class="wrap">
+      <div class="logo" aria-hidden="true">AK</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>About Me</h2>
-    <p>Hello! This is a short paragraph about me and what this website is about.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-left">
+        <h1>Hi, I'm <span class="accent">Adilkan</span>.</h1>
+        <p class="subtitle">I design modern, fast, and beautiful static websites — and I love subtle micro-interactions.</p>
 
-    <h2>My Projects</h2>
-    <p>Here you can find some of my recent projects and works.</p>
-  </main>
+        <div class="actions">
+          <!-- These buttons control the slider -->
+          <button class="btn primary" id="btn-next-slide" aria-label="Next slide">Next Slide</button>
+          <button class="btn ghost" id="btn-prev-slide" aria-label="Previous slide">Prev Slide</button>
+        </div>
 
-  <footer>
-    <p>:)</p>
+        <div class="features" aria-hidden="true">
+          <div class="feat">
+            <strong>Fast</strong>
+            <span>Optimized for speed</span>
+          </div>
+          <div class="feat">
+            <strong>Accessible</strong>
+            <span>Keyboard & mobile friendly</span>
+          </div>
+          <div class="feat">
+            <strong>Static</strong>
+            <span>Hosted on GitHub Pages</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card gallery" id="gallery">
+          <div class="slides" role="region" aria-label="Hollow Knight Gallery">
+            <!-- Image 1 -->
+            <div class="slide active" data-index="0" aria-hidden="false">
+                <img src="https://images.squarespace-cdn.com/content/v1/606d4deb4db8c15ea53b3624/1617786885078-RK2NQMLOIGTBAWUJ6TTT/6ef2c21f9bdcecc9f67b309840cb7c7d_original.jpg" 
+                    alt="Hollow Knight — The Knight in Hallownest">
+                <div class="caption">Hollow Knight — The Knight in Hallownest</div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="slide" data-index="1" aria-hidden="true">
+                <img src="https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1619987265163-9XILMVT3TK4HZ5X6538M/VH_01_1080pjpg.jpg" 
+                    alt="Hollow Knight — Vast Hallownest Depths">
+                <div class="caption">Hallownest Depths — The Quiet Beauty</div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="slide" data-index="2" aria-hidden="true">
+                <img src="https://images.squarespace-cdn.com/content/v1/606d4bb793879d12d807d4c8/1618988252161-50HJPZWN80NSUEDGDHMT/Hornet_banner_wide-1.jpg?format=2500w" 
+                    alt="Hollow Knight Silksong — Hornet in the City of Lace">
+                <div class="caption">Hornet — Silksong Awaits</div>
+            </div>
+            </div>
+
+
+          <div class="slide-controls">
+            <button class="icon" id="prev" aria-label="Previous">◀</button>
+            <div class="dots" id="dots" role="tablist" aria-label="Slide dots"></div>
+            <button class="icon" id="next" aria-label="Next">▶</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="wrap about">
+    <h2>About</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a frontend developer who prefers clean, modern designs and lightweight interactions. I use plain HTML, CSS and JavaScript so sites are fast and easy to host on GitHub Pages.</p>
+        <p>Everything here is responsive, accessible, and optimized for performance.</p>
+      </div>
+      <div class="about-meta">
+        <ul>
+          <li><strong>Location:</strong> Bishkek, Kyrgyzstan</li>
+          <li><strong>Work:</strong> Static sites, UI design</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="wrap projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8f0d7f1bb3a1b6b0c4a3b2e9f6a7c1d2" alt="Project preview">
+        <h3>Modern Landing</h3>
+        <p>Landing page with hero animations and fast load times.</p>
+      </article>
+
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1527430253228-e93688616381?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2f7f5b8b3d2b7f1a6b7c1d3e4f5a6b7c" alt="Project preview">
+        <h3>Docs Site</h3>
+        <p>Documentation built from Markdown and optimized for readability.</p>
+      </article>
+
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5b6f3c2b3b7b5f2f6d8a1d6b7b2c4f12" alt="Project preview">
+        <h3>Interactive UI</h3>
+        <p>Small UI components with vanilla JS animations.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="wrap footer">
+    <p>© 2025 Adilkan Anarbekov — Built with GitHub Pages</p>
   </footer>
+
+  <!-- script -->
   <script src="script.js"></script>
 </body>
 </html>
